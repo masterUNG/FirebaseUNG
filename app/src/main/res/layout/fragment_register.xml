@@ -30,8 +30,9 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_name" />
 
-            <!--Email-->
+            <!--Name-->
             <EditText
+                android:id="@+id/edtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Name :"
@@ -53,6 +54,7 @@
 
             <!--Email-->
             <EditText
+                android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
@@ -72,8 +74,9 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_action_password" />
 
-            <!--Email-->
+            <!--Password-->
             <EditText
+                android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password More 6 digi"
