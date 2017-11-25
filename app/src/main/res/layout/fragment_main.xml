@@ -63,6 +63,8 @@
 
         <!--New Register-->
         <TextView
+            android:clickable="true"
+            android:id="@+id/txtNewRegister"
             android:textColor="@color/colorAccent"
             android:textStyle="italic"
             android:text="New Register"

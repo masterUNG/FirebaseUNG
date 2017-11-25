@@ -9,6 +9,7 @@
 
     <!--Content-->
     <LinearLayout
+        android:background="@drawable/login_masterung"
         android:layout_margin="@dimen/my_margin"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -22,14 +23,14 @@
 
             <!--Icon-->
             <ImageView
-                android:src="@drawable/ic_action_email"
+                android:src="@drawable/ic_action_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <!--Email-->
             <EditText
-                android:inputType="textEmailAddress"
-                android:hint="@string/email"
+                android:inputType="text"
+                android:hint="Name :"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -64,14 +65,14 @@
 
             <!--Icon-->
             <ImageView
-                android:src="@drawable/ic_action_email"
+                android:src="@drawable/ic_action_password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <!--Email-->
             <EditText
-                android:inputType="textEmailAddress"
-                android:hint="@string/email"
+                android:inputType="text"
+                android:hint="Password More 6 digi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
