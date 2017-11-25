@@ -2,4 +2,9 @@
     <string name="app_name">Firebase UNG</string>
     <string name="email">Email :</string>
     <string name="password">Password :</string>
+
+    <string name="register">Register</string>
+    <string name="sub_register">Please Fill All Every Blank</string>
+
+
 </resources>
