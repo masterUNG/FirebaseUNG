@@ -50,7 +50,7 @@ public class RegisterFragment extends Fragment {
 
 //        Setup Firebase
         firebaseAuth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance();
+
 
 
 //        Create Toolbar
@@ -148,11 +148,22 @@ public class RegisterFragment extends Fragment {
     private void saveNameDisplayToFirebase() {
 
 //        Get UID of Firebase
+        firebaseUser = firebaseAuth.getCurrentUser();
+
+        showLog();
 
 
 
 
     }   // saveNameDisplay
+
+    private void showLog() {
+
+        String tag = "26NovV1";
+        Log.d(tag, "UID ==> " + firebaseUser.getUid());
+        Log.d(tag, "Email ==>" + firebaseUser.getEmail());
+
+    }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
