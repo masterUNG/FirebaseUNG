@@ -15,6 +15,7 @@ import android.widget.EditText;
 
 import androidthai.in.th.firebaseung.MainActivity;
 import androidthai.in.th.firebaseung.R;
+import androidthai.in.th.firebaseung.utility.MyAlertDialog;
 
 /**
  * Created by masterung on 25/11/2017 AD.
@@ -65,6 +66,17 @@ public class RegisterFragment extends Fragment {
         emailString = emailEditText.getText().toString().trim();
         passwordString = passwordEditText.getText().toString().trim();
 
+//        Check Space
+        if (nameString.isEmpty() || emailString.isEmpty() || passwordString.isEmpty()) {
+//            Have Space
+            MyAlertDialog myAlertDialog = new MyAlertDialog(getActivity());
+            myAlertDialog.myNormalDialog("Have Space",
+                    getString(R.string.sub_register));
+
+        } else {
+//            No Space
+
+        }
 
     }   // checkSpace
 
