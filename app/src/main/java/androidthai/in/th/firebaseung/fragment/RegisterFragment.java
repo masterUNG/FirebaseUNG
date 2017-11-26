@@ -28,6 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import androidthai.in.th.firebaseung.MainActivity;
 import androidthai.in.th.firebaseung.R;
 import androidthai.in.th.firebaseung.utility.MyAlertDialog;
+import androidthai.in.th.firebaseung.utility.UserModel;
 
 /**
  * Created by masterung on 25/11/2017 AD.
@@ -41,7 +42,7 @@ public class RegisterFragment extends Fragment {
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
     private FirebaseUser firebaseUser;
-    private FirebaseDatabase databaseReference;
+    private DatabaseReference databaseReference;
 
 
     @Override
@@ -50,7 +51,7 @@ public class RegisterFragment extends Fragment {
 
 //        Setup Firebase
         firebaseAuth = FirebaseAuth.getInstance();
-        databaseReference = FirebaseDatabase.getInstance();
+
 
 
 //        Create Toolbar
@@ -148,6 +149,19 @@ public class RegisterFragment extends Fragment {
     private void saveNameDisplayToFirebase() {
 
 //        Get UID of Firebase
+        String tag = "26NovV1";
+
+        firebaseUser = firebaseAuth.getCurrentUser();
+
+        Log.d(tag, "UID ==> " + firebaseUser.getUid());
+        Log.d(tag, "Email ==> " + firebaseUser.getEmail());
+
+        databaseReference = FirebaseDatabase.getInstance()
+                .getReference().child("Users");
+        UserModel userModel = new UserModel(firebaseUser.getUid(), nameString);
+        databaseReference.child(firebaseUser.getUid()).setValue(userModel);
+
+
 
 
 
